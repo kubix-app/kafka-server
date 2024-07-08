@@ -1,6 +1,6 @@
 [
   {
-    "name": "notification.service.topic",
+    "name": "notification-service-topic",
     "partitions": 3,
     "replicationFactor": 1
   }
