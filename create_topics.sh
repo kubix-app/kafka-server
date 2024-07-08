@@ -10,6 +10,7 @@ topics=$(jq -c '.[]' "$TOPICS_JSON")
 while IFS= read -r topic; do
   name=$(echo "$topic" | jq -r '.name')
   partitions=$(echo "$topic" | jq -r '.partitions')
+  replicationFactor=$(echo "$topic" | jq -r '.replicationFactor')
 
   # Create Kafka topic using full path to kafka-topics.sh
   /opt/kafka/bin/kafka-topics.sh --create \
