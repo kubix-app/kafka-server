@@ -23,8 +23,9 @@ services:
   kafka-topic-creator:
     build:
       context: .
-      dockerfile: Dockerfile.topic-creator
+      dockerfile: Dockerfile
     depends_on:
       - kafka
+      - zookeeper
     volumes:
       - ./topics.json:/opt/topics.json
