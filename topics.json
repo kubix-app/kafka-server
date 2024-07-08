@@ -1,0 +1,17 @@
+[
+  {
+    "name": "topic1",
+    "partitions": 3,
+    "replicationFactor": 1
+  },
+  {
+    "name": "topic2",
+    "partitions": 1,
+    "replicationFactor": 1
+  },
+  {
+    "name": "topic3",
+    "partitions": 5,
+    "replicationFactor": 2
+  }
+]
