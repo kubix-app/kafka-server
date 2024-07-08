@@ -1,6 +1,10 @@
-FROM alpine:latest
+FROM wurstmeister/kafka:latest
 
-RUN apk --no-cache add bash jq curl
+# Install additional tools if needed
+RUN apt-get update && apt-get install -y \
+    jq \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
 COPY create_topics.sh /opt/create_topics.sh
 COPY topics.json /opt/topics.json
